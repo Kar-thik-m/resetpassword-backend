@@ -1,5 +1,5 @@
 import express from 'express';
-import { AppUserModel } from '../db-utils/module.js';
+import { AppUserModel } from '../db-utils/model.js';
 import { v4 } from 'uuid';
 import bcrypt from 'bcrypt';
 import crypto from 'crypto';
@@ -118,7 +118,7 @@ authRouter.put('/reset', async function (req, res) {
     const payload = req.body;
 
     try {
-        
+       
         bcrypt.hash(payload.password, 10, async function (err, hash) {
             if (err) {
                 res.status(400).send({ msg: 'Error in reseting' });
