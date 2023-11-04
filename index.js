@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 
-import userRouter from './routes/user.js';
+import userRouter from '../resetpassword-backend/routes/user.js';
 
 import connectToDb from './db-utils/mongoos-connect.js';
 import authRouter from '../resetpassword-backend/routes/app-uses.js';
