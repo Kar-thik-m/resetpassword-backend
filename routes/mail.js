@@ -1,20 +1,16 @@
-
-
 import nodemailer from 'nodemailer';
-import dotenv from 'dotenv'
-dotenv .config();
+
 export const transporter = nodemailer.createTransport({
-    service:'gmail',
-    auth:{
-        user:"sparrowkarthik007@gmail.com",
-        pass:process.env.NODEMAILER_PASS
+    service: 'gmail',
+    auth: {
+        user: 'g.subaash04072002@gmail.com',
+        pass: 'zbnk lbrb tkmo snzx'
     }
-})
+});
 
-export const mailOptions={
-    from:"sparrowkarthik007@gmail.com",
-
-    to:'sparrowkarthik007@gmail.com',
-    subject:'Hello',
-    text:'there'
-}
+export const mailOptions = {
+    from: 'g.subaash04072002@gmail.com',
+    to: 'g.subaash04072002@gmail.com',
+    subject: 'Sending Email using Node.js',
+    text: 'That was easy!'
+};

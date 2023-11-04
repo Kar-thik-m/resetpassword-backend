@@ -1,10 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 
-import userRouter from './routes/User.js';
+import userRouter from './routes/user.js';
 
 import connectToDb from './db-utils/mongoos-connect.js';
-import authRouter from './routes/app-users.js';
+import authRouter from '../resetpassword-backend/routes/app-uses.js';
 
 const app = express();
 
@@ -20,8 +20,8 @@ app.use(express.json());
 
 
 
-app.use('/api/users',userRouter);
-app.use('/api/auth',authRouter);
+app.use('users',userRouter);
+app.use('auth',authRouter);
 
 
 
